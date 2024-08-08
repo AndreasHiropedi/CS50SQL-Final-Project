@@ -6,15 +6,15 @@ Video overview: https://youtu.be/bjVgjOzwL_w
 
 ## Scope
 
-This database is designed to easily store the data monitoring different flights to/ from different destinations, similarly to how Flight Radar monitors flights worldwide.
+This database is designed to easily store the data monitoring different flights to/ from different destinations, similarly to how Flightradar24 monitors flights worldwide.
 
 The following items are **included** in the database:
 
-- ** Airports **: this table stores information about the airports avialable;
-- ** Airlines **: stores information about the different airlines included;
-- ** Manufacturers **: this table contains information about the different airline manufacturers (such as Airbus or Boeing);
-- ** Aircrafts **: in this table we store the types of aircrafts available;
-- ** Flights **: this table stores information about different flights based on certain routes;
+- **Airports**: this table stores information about the airports avialable;
+- **Airlines**: stores information about the different airlines included;
+- **Manufacturers**: this table contains information about the different airline manufacturers (such as Airbus or Boeing);
+- **Aircrafts**: in this table we store the types of aircrafts available;
+- **Flights**: this table stores information about different flights based on certain routes;
 
 The following are **excluded** from the database:
 
