@@ -32,36 +32,36 @@ Users can freely query all the data, since none of the data is meant to be confi
 
 ### Entities
 
-All tables have the <code> IF NOT EXISTS </code> conditions to avoid any issues with duplicates or any other schema problems.
+All tables have the <code>IF NOT EXISTS</code> conditions to avoid any issues with duplicates or any other schema problems.
 
 **Airports**
 
-- <code>"id"</code> indicates the unique identification number per airport. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the airport, it will also be the <code> PRIMARY KEY </code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
+- <code>"id"</code> indicates the unique identification number per airport. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the airport, it will also be the <code>PRIMARY KEY</code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
 - <code>"airport_name"</code> every airport should have a name, hence the type is <code>TEXT</code>. Since all airports have a name, this value has the condition of <code>NOT NULL</code>.
 - <code>"airport_code"</code> similarly to the name, the type will be <code>TEXT</code>, and since all airports have a code, this value has the condition of <code>NOT NULL</code>.
 - <code>"country_of_origin"</code> once again, the type here will be <code>TEXT</code>, and since all airports must have a contry of origin, this value has the condition of <code>NOT NULL</code>.
 
 **Airlines**
 
-- <code>"id"</code> indicates the unique identification number per airline. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the airline, it will also be the <code> PRIMARY KEY </code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
+- <code>"id"</code> indicates the unique identification number per airline. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the airline, it will also be the <code>PRIMARY KEY</code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
 - <code>"airline_name"</code> every airline should have a name, hence the type is <code>TEXT</code>. Since all airlines have a name, this value has the condition of <code>NOT NULL</code>.
 - <code>"country_of_origin"</code> once again, the type here will be <code>TEXT</code>, and since all airlines must have a contry of origin, this value has the condition of <code>NOT NULL</code>.
 
 **Manufacturers**
 
-- <code>"id"</code> indicates the unique identification number per aircraft manufacturer. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the manufacturer, it will also be the <code> PRIMARY KEY </code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
+- <code>"id"</code> indicates the unique identification number per aircraft manufacturer. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the manufacturer, it will also be the <code>PRIMARY KEY</code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
 - <code>"manufacturer_name"</code> every manufacturer should have a name, hence the type is <code>TEXT</code>. Since all manufacturers have a name, this value has the condition of <code>NOT NULL</code>.
 
 **Aircrafts**
 
-- <code>"id"</code> indicates the unique identification number per aircraft. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the aircraft, it will also be the <code> PRIMARY KEY </code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
+- <code>"id"</code> indicates the unique identification number per aircraft. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the aircraft, it will also be the <code>PRIMARY KEY</code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
 - <code>"manufacturer_id"</code> specifies the ID of the manufacturer of that aircraft, hence the type is <code>INTEGER</code>. The <code>FOREIGN KEY</code> constraint applied to the 'id' column in the 'Manufacturers' table is restricted.
 - <code>"aircraft_type"</code> every aircraft should have a name/ type, hence the type is <code>TEXT</code>. Since all aircrafts must have one, this value has the condition of <code>NOT NULL</code>.
 
 **Flights**
 
-- <code>"id"</code> indicates the unique identification number per flight. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the flight, it will also be the <code> PRIMARY KEY </code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
-- - <code>"airline_id"</code> specifies the ID of the airline, hence the type is <code>INTEGER</code>. The <code>FOREIGN KEY</code> constraint applied to the 'id' column in the 'Airlines' table is restricted.
+- <code>"id"</code> indicates the unique identification number per flight. For this reason, the type is <code>INTEGER</code>. Since there will always be an unique ID of the flight, it will also be the <code>PRIMARY KEY</code>. ID value will also be added automatically using <code>AUTOINCREMENT</code>.
+- <code>"airline_id"</code> specifies the ID of the airline, hence the type is <code>INTEGER</code>. The <code>FOREIGN KEY</code> constraint applied to the 'id' column in the 'Airlines' table is restricted.
 - <code>"aircraft_id"</code> specifies the ID of the aircraft, hence the type is <code>INTEGER</code>. The <code>FOREIGN KEY</code> constraint applied to the 'id' column in the 'Aircrafts' table is restricted.
 - <code>"departing_airport_code"</code> indicates the code of the airport from where the flight is departing, hence the type is <code>TEXT</code>. Moreover, since the value cannot be empty, this value has the condition of <code>NOT NULL</code>.
 - <code>"arrival_airport_code"</code> indicates the code of the airport where the flight is arriving at, hence the type is <code>TEXT</code>. Moreover, since the value cannot be empty, this value has the condition of <code>NOT NULL</code>.
